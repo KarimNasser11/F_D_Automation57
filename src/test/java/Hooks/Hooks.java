@@ -32,7 +32,7 @@ public class Hooks {
         if (!screenshots.exists()) screenshots.mkdirs();
         FilesUtiles.cleanDirectory(screenshots);
         String browserName = PropertiesUtils.getPropertyValue("browserType");
-        driver = DriverManager.createInstance(browserName);
+        driver = DriverManager.createInstance("chrome");
         new loginpage(driver).NavigateToLoginPage();
         testData = new JsonUtils("test-data");
     }
